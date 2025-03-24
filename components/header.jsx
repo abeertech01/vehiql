@@ -29,8 +29,8 @@ const Header = async ({ isAdminPage = false }) => {
         <div className="flex items-center space-x-4">
           {isAdminPage ? (
             <Link href={"/"}>
-              <Button>
-                <Heart size={18} />
+              <Button variant={""}>
+                <ArrowLeft size={18} />
                 <span className="hidden md:inline">Back to App</span>
               </Button>
             </Link>
