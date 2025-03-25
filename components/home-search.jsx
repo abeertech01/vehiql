@@ -64,6 +64,7 @@ const HomeSearch = () => {
       reader.readAsDataURL(file)
     }
   }
+
   const { getRootProps, getInputProps, isDragActive, isDragReject } =
     useDropzone({
       onDrop,
