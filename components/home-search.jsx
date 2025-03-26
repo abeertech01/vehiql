@@ -131,7 +131,7 @@ const HomeSearch = () => {
               ) : (
                 <div {...getRootProps()} className="cursor-pointer">
                   <input {...getInputProps()} />
-                  <di className="flex flex-col items-center">
+                  <div className="flex flex-col items-center">
                     <Upload className="h-12 w-12 text-gray-400 mb-2" />
                     <p className="text-gray-500 mb-2">
                       {isDragActive && !isDragReject
@@ -144,7 +144,7 @@ const HomeSearch = () => {
                     <p className="text-gray-400 text-sm">
                       Supports: JPG, PNG (max 5MB)
                     </p>
-                  </di>
+                  </div>
                 </div>
               )}
             </div>
