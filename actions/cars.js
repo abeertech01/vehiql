@@ -27,10 +27,11 @@ export async function processCarImageWithAI(file) {
 
     const base64Image = await fileToBase64(file)
 
+    // Create image part for the model
     const imagePart = {
       inlineData: {
         data: base64Image,
-        mimetype: file.type,
+        mimeType: file.type,
       },
     }
 
