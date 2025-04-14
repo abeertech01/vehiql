@@ -32,14 +32,14 @@ import useFetch from "@/hooks/use-fetch"
 import { addCar, processCarImageWithAI } from "@/actions/cars"
 import { useRouter } from "next/navigation"
 
-const fuelTypes = ["Petrol", "Diesel", "Hybrid", "Plug-in Hybrid"]
+const fuelTypes = ["Petrol", "Diesel", "Electric", "Hybrid", "Plug-in Hybrid"]
 const transmissions = ["Automatic", "Manual", "Semi-Automatic"]
 const bodyTypes = [
-  "Sedan",
   "SUV",
+  "Sedan",
   "Hatchback",
-  "Coupe",
   "Convertible",
+  "Coupe",
   "Wagon",
   "Pickup",
 ]
