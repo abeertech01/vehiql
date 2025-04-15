@@ -1,3 +1,5 @@
+"use server"
+
 import aj from "@/lib/arcjet"
 import { serializeCarData } from "@/lib/helper"
 import { db } from "@/lib/prisma"
