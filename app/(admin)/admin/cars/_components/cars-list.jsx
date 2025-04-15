@@ -206,27 +206,28 @@ const CarsList = () => {
                   {carsData.data.map((car) => {
                     return (
                       <TableRow key={car.id}>
-                        <TableCell className="w-10 h-10 rounded-md overflow-hidden">
-                          {car.images && car.images.length > 0 ? (
-                            <Image
-                              src={car.images[0]}
-                              alt={`${car.make} ${car.model}`}
-                              height={40}
-                              width={40}
-                              className="w-full h-full object-cover"
-                              priority
-                            />
-                          ) : (
-                            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                              <CarIcon className="h-6 w-6 text-gray-400" />
-                            </div>
-                          )}
+                        <TableCell>
+                          <div className="w-10 h-10 rounded-md overflow-hidden">
+                            {car.images && car.images.length > 0 ? (
+                              <Image
+                                src={car.images[0]}
+                                alt={`${car.make} ${car.model}`}
+                                height={40}
+                                width={40}
+                                className="w-full h-full object-cover"
+                                priority
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                                <CarIcon className="h-6 w-6 text-gray-400" />
+                              </div>
+                            )}
+                          </div>
                         </TableCell>
                         <TableCell className={"font-medium"}>
                           {car.make} {car.model}
                         </TableCell>
                         <TableCell>{car.year}</TableCell>
-                        <TableCell>{car.price}</TableCell>
                         <TableCell>{formatCurrency(car.price)}</TableCell>
                         <TableCell>{getStatusBadge(car.status)}</TableCell>
                         <TableCell>

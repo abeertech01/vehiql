@@ -1,3 +1,5 @@
+"use server"
+
 import aj from "@/lib/arcjet"
 import { serializeCarData } from "@/lib/helper"
 import { db } from "@/lib/prisma"
@@ -42,7 +44,7 @@ export async function processImageSearch(file) {
         const { remaining, reset } = decision.reason
 
         console.error({
-          code: "RATE_LIMIT_EXCEED",
+          code: "RATE_LIMIT_EXCEEDED",
           details: {
             remaining,
             resetInSeconds: reset,
@@ -104,7 +106,7 @@ export async function processImageSearch(file) {
         data: carDetails,
       }
     } catch (error) {
-      console.log("Failed to parse AI response", parseError)
+      console.error("Failed to parse AI response", parseError)
       return {
         success: false,
         error: "Failed to parse AI response",
